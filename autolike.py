@@ -41,12 +41,12 @@ def autolike():
         password.send_keys(Keys.ENTER)
         sleep(random.randint(sleepRandomMin, sleepRandomMax))
 
-		# ログイン情報の保存は後でを選択
+        # ログイン情報の保存は後でを選択
         loginSaveElement = driver.find_elements_by_xpath(config.get('Element', 'loginSaveElement'))
         if len(loginSaveElement) > 0:
             loginSaveElement[0].click()
 
-		# お知らせをオンにするは後でを選択
+    	# お知らせをオンにするは後でを選択
         notificationOnElement = driver.find_elements_by_xpath(config.get('Element', 'notificationOnElement'))
         if len(notificationOnElement) > 0:
             notificationOnElement[0].click()
